@@ -1,7 +1,7 @@
 {
   "name": "varcn",
-  "version": "0.1.1",
-  "description": "start server for varcn browser extension",
+  "version": "0.1.2",
+  "description": "websocket server for varcn browser extension",
   "publishConfig": {
     "access": "public"
   },
@@ -26,7 +26,7 @@
   },
   "bin": "./dist/index.js",
   "scripts": {
-    "dev": "bun run src/index.ts --watch",
+    "dev": "bun run --watch src/index.ts",
     "build": "bun build --outdir dist --target node --entrypoints src/index.ts --minify",
     "start": "node dist/index.js",
     "pub:beta": "bun run build && bun publish --no-git-checks --access public --tag beta",
@@ -37,5 +37,12 @@
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.14.4",
+    "@hono/node-ws": "^1.1.7",
+    "commander": "^14.0.0",
+    "hono": "^4.7.11",
+    "ws": "^8.18.2"
   }
 }
