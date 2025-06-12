@@ -1,0 +1,27 @@
+{
+  "name": "varcn",
+  "private": true,
+  "type": "module",
+  "author": {
+    "name": "entange",
+    "url": "https://twitter.com/entange_hq"
+  },
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,mdx,json}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "turbo": "^2.5.4",
+    "typescript": "5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "bun@1.2.15",
+  "workspaces": [
+    "apps/*",
+    "pkgs/*"
+  ]
+}
