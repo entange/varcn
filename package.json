@@ -7,9 +7,13 @@
     "url": "https://twitter.com/entange_hq"
   },
   "scripts": {
-    "dev": "turbo run dev --parallel",
     "build": "turbo run build",
-    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,mdx,json}\""
+    "cli:build": "turbo --filter=varcn build",
+    "cli:start": "turbo --filter=varcn start",
+    "dev": "turbo run dev --parallel",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,mdx,json}\"",
+    "pub:beta": "cd pkgs/varcn && bun pub:beta",
+    "pub:release": "cd pkgs/varcn && bun pub:release"
   },
   "devDependencies": {
     "prettier": "^3.5.3",

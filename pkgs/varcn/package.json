@@ -1,0 +1,41 @@
+{
+  "name": "varcn",
+  "version": "0.1.1",
+  "description": "start server for varcn browser extension",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "entange",
+    "url": "https://twitter.com/entange_hq"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/entange/varcn.git",
+    "directory": "pkgs/varcn"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": "./dist/index.js",
+  "scripts": {
+    "dev": "bun run src/index.ts --watch",
+    "build": "bun build --outdir dist --target node --entrypoints src/index.ts --minify",
+    "start": "node dist/index.js",
+    "pub:beta": "bun run build && bun publish --no-git-checks --access public --tag beta",
+    "pub:release": "bun run build && bun publish --access public"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
