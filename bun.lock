@@ -11,7 +11,7 @@
     },
     "pkgs/varcn": {
       "name": "varcn",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "bin": "./dist/index.js",
       "dependencies": {
         "@hono/node-server": "^1.14.4",
@@ -19,6 +19,7 @@
         "commander": "^14.0.0",
         "hono": "^4.7.11",
         "ws": "^8.18.2",
+        "zod": "^3.25.67",
       },
       "devDependencies": {
         "@types/bun": "latest",
@@ -66,5 +67,7 @@
     "varcn": ["varcn@workspace:pkgs/varcn"],
 
     "ws": ["ws@8.18.2", "", { "peerDependencies": { "bufferutil": "^4.0.1", "utf-8-validate": ">=5.0.2" }, "optionalPeers": ["bufferutil", "utf-8-validate"] }, "sha512-DMricUmwGZUVr++AEAe2uiVM7UoO9MAVZMDu05UQOaUII0lp+zOzLLU4Xqh/JvTqklB1T4uELaaPBKyjE1r4fQ=="],
+
+    "zod": ["zod@3.25.67", "", {}, "sha512-idA2YXwpCdqUSKRCACDE6ItZD9TZzy3OZMtpfLoh6oPR47lipysRrJfjzMqFxQ3uJuUPyUeWe1r9vLH33xO/Qw=="],
   }
 }
